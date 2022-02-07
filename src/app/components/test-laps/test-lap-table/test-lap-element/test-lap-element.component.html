@@ -1,0 +1,17 @@
+<div *ngIf="this.lap">
+    <mat-card class=flexed>
+        <p>{{lap.driver}}</p>
+        <mat-divider class=padded [vertical]="true"></mat-divider>
+        <p class=padded>{{lap.getLapTimeAsString()}}</p>
+        <mat-divider [vertical]="true" class=padded></mat-divider>
+        <p class=padded>{{lap.fuel}}</p>
+        <mat-divider [vertical]="true" class=padded></mat-divider>
+        <div *ngIf="lap.fuelSave; then checkBlock else uncheckBlock"></div>
+        <ng-template #checkBlock><img class=padded src="./assets/icons/icon-checked.png" width="30"></ng-template>
+        <ng-template #uncheckBlock><img class=padded src="./assets/icons/icon-unchecked.png" width="30"></ng-template>
+        <mat-divider [vertical]="true" class=padded></mat-divider>
+        <button mat-raised-button>
+            <mat-icon (click)="onDelete()">delete</mat-icon>
+        </button>
+    </mat-card>
+</div>

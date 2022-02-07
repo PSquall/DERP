@@ -1,0 +1,12 @@
+<div class=flexed>
+    <p class=padded>Driver</p>
+    <mat-divider class=padded [vertical]="true"></mat-divider>
+    <p class=padded>Lap Time</p>
+    <mat-divider [vertical]="true" class=padded></mat-divider>
+    <p class=padded>Fuel Used</p>
+    <mat-divider [vertical]="true" class=padded></mat-divider>
+    <p class=padded>Fuelsave Lap</p>
+</div>
+<div *ngIf="laps">
+    <app-test-lap-element (deleteEvent)="deleteLap($event)" [lap]="lap" *ngFor="let lap of laps"></app-test-lap-element>
+</div>

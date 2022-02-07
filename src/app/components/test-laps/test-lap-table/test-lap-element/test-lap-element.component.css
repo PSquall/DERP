@@ -1,0 +1,11 @@
+mat-card {
+    margin: 30px;
+}
+
+.padded {
+    padding-left: 25px;
+} 
+
+.flexed {
+    display: flex;
+}
